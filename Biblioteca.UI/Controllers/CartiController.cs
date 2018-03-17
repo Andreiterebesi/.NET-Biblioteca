@@ -18,6 +18,7 @@ namespace Biblioteca.UI.Controllers
         // GET: Carti
         public ActionResult Index()
         {
+         
             return View(db.Carti.ToList());
         }
 
