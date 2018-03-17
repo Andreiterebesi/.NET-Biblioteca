@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Biblioteca.UI.Models.BibliotecaModels.Carte>
+
+@{
+    ViewBag.Title = "Lista Carti";
+}
+
+<h2>Lista Carti</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Titlu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Autor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnAparitie)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Titlu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Autor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnAparitie)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CarteID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CarteID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CarteID })
+        </td>
+    </tr>
+}
+
+</table>
