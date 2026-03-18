@@ -1,80 +1,407 @@
-﻿body {
+body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background: #f8f2ee;
+    color: #3d2d2f;
 }
 
-/* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
 .dl-horizontal dt {
     white-space: normal;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
 textarea {
-    max-width: 280px;
+    max-width: 100%;
 }
-.body{
-    background-color:aqua;
+
+.body {
+    background-color: aqua;
 }
+
 .sidenav {
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 160px; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
     left: 0;
-    background-color: #111; /* Black */
-    overflow-x: hidden; /* Disable horizontal scroll */
+    background-color: #111;
+    overflow-x: hidden;
     padding-top: 20px;
 }
 
-    /* The navigation menu links */
-    .sidenav a {
-        padding: 6px 8px 6px 16px;
-        text-decoration: none;
-        font-size: 25px;
-        color: #818181;
-        display: block;
-    }
-
-        /* When you mouse over the navigation links, change their color */
-        .sidenav a:hover {
-            color: #f1f1f1;
-        }
-
-/* Style page content */
-.main {
-    margin-left: 160px; /* Same as the width of the sidebar */
-    padding:0 10px;
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 160px;
+    padding: 0 10px;
+}
+
 @media screen and (max-height: 450px) {
     .sidenav {
         padding-top: 15px;
     }
 
-        .sidenav a {
-            font-size: 18px;
-        }
+    .sidenav a {
+        font-size: 18px;
+    }
 }
-.AndreiHeaderBg{
-    position :absolute;
-    width:100%;
-    height:100%;
-    z-index:-1;
+
+.AndreiHeaderBg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
-img{
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.invitation-page {
+    padding: 30px 0 60px;
+}
+
+.invite-hero {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: stretch;
+    background: linear-gradient(135deg, #fff7f1 0%, #f4d7d7 100%);
+    border-radius: 28px;
+    padding: 48px;
+    box-shadow: 0 24px 70px rgba(105, 69, 74, 0.12);
+    overflow: hidden;
+    position: relative;
+}
+
+.invite-hero:before,
+.invite-hero:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.invite-hero:before {
+    width: 260px;
+    height: 260px;
+    top: -120px;
+    right: -60px;
+}
+
+.invite-hero:after {
+    width: 180px;
+    height: 180px;
+    bottom: -70px;
+    left: 45%;
+}
+
+.invite-hero__content,
+.invite-countdown-card {
+    position: relative;
+    z-index: 1;
+}
+
+.invite-badge,
+.section-heading span {
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 12px;
+    font-weight: 700;
+    color: #ad6c74;
+    margin-bottom: 14px;
+}
+
+.invite-hero h1 {
+    font-size: 62px;
+    line-height: 1;
+    margin: 0 0 12px;
+    font-weight: 700;
+}
+
+.invite-date {
+    font-size: 22px;
+    margin-bottom: 18px;
+    color: #7a5459;
+}
+
+.invite-intro {
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 700px;
+}
+
+.invite-actions {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.invite-countdown-card {
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(173, 108, 116, 0.2);
+    border-radius: 24px;
+    padding: 28px;
+    backdrop-filter: blur(10px);
+    align-self: center;
+}
+
+.countdown-label,
+.countdown-note {
+    margin: 0;
+    color: #7a5459;
+}
+
+.countdown-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin: 24px 0 18px;
+}
+
+.countdown-grid div {
+    background: #fff;
+    border-radius: 18px;
+    padding: 18px 12px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(105, 69, 74, 0.08);
+}
+
+.countdown-grid strong {
+    display: block;
+    font-size: 34px;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.invite-section {
+    margin-top: 36px;
+    background: #fff;
+    border-radius: 28px;
+    padding: 38px;
+    box-shadow: 0 18px 45px rgba(61, 45, 47, 0.06);
+}
+
+.section-heading h2 {
+    margin-top: 0;
+    margin-bottom: 26px;
+    font-size: 34px;
+}
+
+.story-grid,
+.location-grid,
+.gallery-grid,
+.rsvp-wrapper {
+    display: grid;
+    gap: 22px;
+}
+
+.story-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.story-grid article,
+.location-card,
+.guest-list-card {
+    border-radius: 22px;
+    padding: 24px;
+    background: #fcf7f5;
+    border: 1px solid #f0dfdb;
+}
+
+.timeline {
+    position: relative;
+    display: grid;
+    gap: 20px;
+}
+
+.timeline:before {
+    content: "";
+    position: absolute;
+    left: 62px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(#efc3bf, #ad6c74);
+}
+
+.timeline-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 18px;
+    align-items: start;
+}
+
+.timeline-item:before {
+    content: "";
+    position: absolute;
+    left: 54px;
+    top: 9px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #ad6c74;
+    border: 4px solid #fff;
+    box-shadow: 0 0 0 5px rgba(173, 108, 116, 0.15);
+}
+
+.timeline-hour {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ad6c74;
+}
+
+.location-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.location-card a {
+    color: #ad6c74;
+    font-weight: 700;
+}
+
+.music-card small {
+    display: block;
+    margin-top: 12px;
+    color: #7a5459;
+    line-height: 1.6;
+}
+
+.rsvp-wrapper {
+    grid-template-columns: 1.6fr 1fr;
+    align-items: start;
+}
+
+.rsvp-form {
+    background: #fcf7f5;
+    border: 1px solid #f0dfdb;
+    border-radius: 22px;
+    padding: 26px;
+}
+
+.rsvp-feedback {
+    margin-top: 16px;
+    font-weight: 700;
+    color: #ad6c74;
+}
+
+.guest-list-card ul {
+    margin: 0 0 16px;
+    padding-left: 18px;
+}
+
+.gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.gallery-photo {
+    min-height: 220px;
+    border-radius: 24px;
+    display: flex;
+    align-items: end;
+    justify-content: start;
+    padding: 18px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-photo:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(61, 45, 47, 0.72), rgba(61, 45, 47, 0.12));
+}
+
+.gallery-photo span {
+    position: relative;
+    z-index: 1;
+}
+
+.photo-one {
+    background-image: linear-gradient(135deg, #9d6b53, #dba58f);
+}
+
+.photo-two {
+    background-image: linear-gradient(135deg, #7b8b6f, #c2d2aa);
+}
+
+.photo-three {
+    background-image: linear-gradient(135deg, #7a5459, #e6b7bf);
+}
+
+.photo-four {
+    background-image: linear-gradient(135deg, #4f6d7a, #9dc9d9);
+}
+
+@media (max-width: 991px) {
+    .invite-hero,
+    .story-grid,
+    .location-grid,
+    .rsvp-wrapper,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .invite-hero {
+        padding: 32px 24px;
+    }
+
+    .invite-hero h1 {
+        font-size: 46px;
+    }
+}
+
+@media (max-width: 767px) {
+    .invite-section,
+    .invite-countdown-card {
+        padding: 24px;
+    }
+
+    .timeline {
+        gap: 28px;
+    }
+
+    .timeline:before {
+        left: 23px;
+    }
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+        padding-left: 54px;
+    }
+
+    .timeline-item:before {
+        left: 15px;
+    }
+
+    .timeline-hour {
+        font-size: 20px;
+    }
 }
