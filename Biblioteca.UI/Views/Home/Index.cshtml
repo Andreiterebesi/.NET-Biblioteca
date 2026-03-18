@@ -1,31 +1,226 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+@{
+    ViewBag.Title = "Invitatie digitala";
 }
 
+<div class="invitation-page">
+    <section class="invite-hero">
+        <div class="invite-hero__content">
+            <span class="invite-badge">Invitație digitală tip link</span>
+            <h1>Bianca &amp; Andrei</h1>
+            <p class="invite-date">14 septembrie 2026 · Brașov</p>
+            <p class="invite-intro">
+                Vă invităm să fiți alături de noi la începutul unei noi povești. Am pregătit o pagină elegantă,
+                ușor de trimis pe WhatsApp sau SMS, cu toate detaliile importante într-un singur loc.
+            </p>
+            <div class="invite-actions">
+                <a class="btn btn-primary btn-lg" href="#rsvp">Confirmă prezența</a>
+                <a class="btn btn-default btn-lg" href="#program">Vezi programul</a>
+            </div>
+        </div>
+        <div class="invite-countdown-card">
+            <p class="countdown-label">Numărătoare inversă</p>
+            <div class="countdown-grid" id="countdown" data-event-date="2026-09-14T13:00:00">
+                <div><strong id="days">0</strong><span>zile</span></div>
+                <div><strong id="hours">0</strong><span>ore</span></div>
+                <div><strong id="minutes">0</strong><span>minute</span></div>
+                <div><strong id="seconds">0</strong><span>secunde</span></div>
+            </div>
+            <p class="countdown-note">Până la ceremonia noastră civilă.</p>
+        </div>
+    </section>
 
-<div class="jumbotron">
-    <h1>Biblioteca</h1>
-    <p class="lead">Aceasta aplicatie a fost facuta in cadrul cursului C#.NET,curs tinut de firma FastTrackIT.Aplicatia este destinata unei biblioteci si permite evidenta cartilor,a cititorilor si a imprumuturilor efectuate.Toate datele fiind pastrate intr-o baza de date SQLServer.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
-<img src="https://preview.ibb.co/i1i5VH/biblioteca_investitori.jpg" alt="biblioteca_investitori" border="0" style="width:100%;height:30%;">
+    <section class="invite-section invite-story">
+        <div class="section-heading">
+            <span>Povestea noastră</span>
+            <h2>Nume mirii + poveste</h2>
+        </div>
+        <div class="story-grid">
+            <article>
+                <h3>Cum ne-am cunoscut</h3>
+                <p>
+                    Totul a început cu o cafea lungă și o conversație care părea că nu se mai termină. Din acel moment,
+                    fiecare zi a adăugat un nou capitol poveștii noastre.
+                </p>
+            </article>
+            <article>
+                <h3>Momentul "Da"</h3>
+                <p>
+                    Cererea în căsătorie a venit într-o seară liniștită, cu lumini calde, emoții sincere și promisiunea
+                    unei vieți construite împreună.
+                </p>
+            </article>
+            <article>
+                <h3>Ce urmează</h3>
+                <p>
+                    Ne dorim o zi relaxată, luminoasă și plină de oameni dragi. Această invitație digitală este modul nostru
+                    preferat de a vă avea aproape încă dinaintea evenimentului.
+                </p>
+            </article>
+        </div>
+    </section>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Evidenta Cartilor</h2>
-        <p>
-            Biblioteca permite evidenta cartilor din biblioteca.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Evidenta Clientilor</h2>
-        <p>Biblioteca permite evidenta cititorilor bibliotecii.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Evidenta Imprumuturilor</h2>
-        <p>Biblioteca permite evidenta imprumuturilor efectuate catre cititori.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
+    <section class="invite-section" id="program">
+        <div class="section-heading">
+            <span>Data și programul</span>
+            <h2>Agenda evenimentului</h2>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="timeline-hour">13:00</span>
+                <div>
+                    <h3>Ceremonia civilă</h3>
+                    <p>Primăria Brașov · Un moment intim alături de familie și prieteni.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-hour">15:00</span>
+                <div>
+                    <h3>Sesiune foto &amp; welcome drinks</h3>
+                    <p>Domeniul de sub Tâmpa · Muzică ambientală, prosecco și fotografii cu invitații.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-hour">18:00</span>
+                <div>
+                    <h3>Petrecerea</h3>
+                    <p>Salonul Magnolia · Cină festivă, dans, candy bar și momente surpriză.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="invite-section invite-locations">
+        <div class="section-heading">
+            <span>Locații + hartă Google Maps</span>
+            <h2>Ajungi ușor la fiecare moment</h2>
+        </div>
+        <div class="location-grid">
+            <article class="location-card">
+                <h3>Ceremonia civilă</h3>
+                <p>Piața Sfatului 30, Brașov</p>
+                <a href="https://maps.google.com/?q=Piata+Sfatului+30+Brasov" target="_blank" rel="noopener">Deschide în Google Maps</a>
+            </article>
+            <article class="location-card">
+                <h3>Recepția</h3>
+                <p>Str. Stejerișului 11, Brașov</p>
+                <a href="https://maps.google.com/?q=Strada+Stejerisului+11+Brasov" target="_blank" rel="noopener">Vezi ruta către locație</a>
+            </article>
+            <article class="location-card music-card">
+                <h3>Animații / muzică</h3>
+                <p>DJ live, lumini ambientale și un colț special cu melodii recomandate de invitați.</p>
+                <button type="button" class="btn btn-default" id="musicToggle">Activează atmosfera</button>
+                <small id="musicMessage">Muzica pornește simbolic prin această interacțiune și poate fi conectată ulterior la un player real.</small>
+            </article>
+        </div>
+    </section>
+
+    <section class="invite-section" id="rsvp">
+        <div class="section-heading">
+            <span>RSVP</span>
+            <h2>Confirmare participare</h2>
+        </div>
+        <div class="rsvp-wrapper">
+            <form class="rsvp-form" id="rsvpForm">
+                <div class="form-group">
+                    <label for="guestName">Nume și prenume</label>
+                    <input class="form-control" id="guestName" type="text" placeholder="Ex: Ioana Popescu" required />
+                </div>
+                <div class="form-group">
+                    <label for="guestCount">Număr persoane</label>
+                    <select class="form-control" id="guestCount">
+                        <option>1 persoană</option>
+                        <option>2 persoane</option>
+                        <option>3 persoane</option>
+                        <option>4 persoane</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="guestMessage">Mesaj pentru miri</label>
+                    <textarea class="form-control" id="guestMessage" rows="4" placeholder="Abia așteptăm să sărbătorim împreună!"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg">Trimite RSVP</button>
+                <p class="rsvp-feedback" id="rsvpFeedback"></p>
+            </form>
+            <div class="guest-list-card">
+                <h3>Lista de invitați</h3>
+                <ul>
+                    <li>Familia apropiată</li>
+                    <li>Prieteni din liceu și facultate</li>
+                    <li>Colegii și partenerii apropiați</li>
+                    <li>Invitați speciali pentru after party</li>
+                </ul>
+                <p>
+                    Pagina poate fi extinsă ușor cu acces diferențiat, cod unic per invitat sau tabel sincronizat cu răspunsurile.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="invite-section invite-gallery">
+        <div class="section-heading">
+            <span>Galerie foto</span>
+            <h2>Câteva cadre din povestea noastră</h2>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-photo photo-one"><span>Save the date</span></div>
+            <div class="gallery-photo photo-two"><span>Weekend getaway</span></div>
+            <div class="gallery-photo photo-three"><span>Engagement day</span></div>
+            <div class="gallery-photo photo-four"><span>Best memories</span></div>
+        </div>
+    </section>
 </div>
+
+@section scripts {
+    <script>
+        (function () {
+            var countdown = document.getElementById('countdown');
+            if (countdown) {
+                var eventDate = new Date(countdown.getAttribute('data-event-date')).getTime();
+                var ids = {
+                    days: document.getElementById('days'),
+                    hours: document.getElementById('hours'),
+                    minutes: document.getElementById('minutes'),
+                    seconds: document.getElementById('seconds')
+                };
+
+                function updateCountdown() {
+                    var now = new Date().getTime();
+                    var distance = Math.max(eventDate - now, 0);
+                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    ids.days.textContent = days;
+                    ids.hours.textContent = hours;
+                    ids.minutes.textContent = minutes;
+                    ids.seconds.textContent = seconds;
+                }
+
+                updateCountdown();
+                window.setInterval(updateCountdown, 1000);
+            }
+
+            var musicToggle = document.getElementById('musicToggle');
+            var musicMessage = document.getElementById('musicMessage');
+            if (musicToggle && musicMessage) {
+                musicToggle.addEventListener('click', function () {
+                    musicMessage.textContent = 'Atmosfera este activată: aici poate fi conectat un player Spotify, YouTube sau un fișier audio personalizat.';
+                    musicToggle.textContent = 'Atmosferă activă';
+                    musicToggle.setAttribute('disabled', 'disabled');
+                });
+            }
+
+            var rsvpForm = document.getElementById('rsvpForm');
+            var rsvpFeedback = document.getElementById('rsvpFeedback');
+            if (rsvpForm && rsvpFeedback) {
+                rsvpForm.addEventListener('submit', function (event) {
+                    event.preventDefault();
+                    var guestName = document.getElementById('guestName').value || 'Invitat drag';
+                    rsvpFeedback.textContent = guestName + ', mulțumim! Confirmarea ta a fost înregistrată în varianta demo a invitației.';
+                    rsvpForm.reset();
+                });
+            }
+        })();
+    </script>
+}
